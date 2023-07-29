@@ -81,7 +81,7 @@ async fn hello_world(
 
     tokio::io::copy(&mut body, &mut file).await?;
 
-    response(StatusCode::OK, "ok")
+    response(StatusCode::OK, id.to_string())
 }
 
 #[tokio::main]
